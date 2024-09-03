@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <style>
+        .container{
+            text-align: center;
+            align-items: center;
+            /* background-color: aqua; */
+            margin:  150px 400px;
+            padding: 30px;
+            border-radius: 10px;
+            background-image: url(https://static.vecteezy.com/system/resources/thumbnails/025/284/015/small_2x/close-up-growing-beautiful-forest-in-glass-ball-and-flying-butterflies-in-nature-outdoors-spring-season-concept-generative-ai-photo.jpg);
+            background-size: cover;
+            border-color: black;
+            border: double;
+            border-width: 5px;
+        }
+        h1,label{
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+    <form action="{% url 'insert' %}" method="post" >
+        {% csrf_token %}
+        <div class="container">
+        <marquee><h1>Registration Page</h1></marquee>
+        <!-- <div class="container"> -->
+        <table style="display: flex; justify-content: center;"> 
+            <tr>
+                <td><label>firstname:</label><input type="text" id="fname" name="fname"><br></td>
+            </tr>
+            <tr>
+                <td style="padding: 10px;"><label>lastname:</label><input type="text" id="lname" name="lname"></td>
+            </tr>
+            <tr>
+                <td style="padding: 10px;"><label>Email:</label><input type="email" id="email" name="email"></td>
+            </tr>
+            <tr>
+                <td style="padding: 10px;"><label>contact:</label><input type="tel" id="contact" name="contact"></td>
+            </tr>
+            <tr>
+                <td >
+                    <button input type="submit" value="Insert">Click me!!</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="/Showtable"><button>Click</button></a>
+                </td>
+            <tr>
+            
+        </table>
+    </div>
+    </form>
+</body>
+
+</html>

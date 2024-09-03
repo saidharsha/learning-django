@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1> Show Page </h1>
+    {% if key1 %}
+    {% for i in key1 %}
+    Image Name: {{i.Imagename}}
+    <br>
+    <img src="{{MEDIA_URL}}{{i.Image.url}}" alt=""srcset="">
+
+    {% endfor %}
+    {% endif %}
+</body>
+</html>
